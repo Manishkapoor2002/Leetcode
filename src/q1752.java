@@ -36,7 +36,7 @@ public class q1752 {
     }
     public static void main(String[] args) {
         int[] nums = {1};
-       boolean ans = check(nums);
+        boolean ans = check(nums);
         System.out.println(ans);
     }
 }
