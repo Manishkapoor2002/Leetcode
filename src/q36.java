@@ -57,14 +57,14 @@ public class q36 {
 
                 countj++;
 //                System.out.println( +" " +val);
-                System.out.println(board[k][j] +"at : i = " +i + ", j =" +k +" " +val);
+//                System.out.println(board[k][j] +"at : i = " +i + ", j =" +k +" " +val);
 
 
             }
         }
 //        System.out.println(counti +" " +countj);
         if(counti>1 || countj>1){
-            System.out.println("From Row and Column");
+//            System.out.println("From Row and Column");
             return false;
         }
 return true;
@@ -84,12 +84,12 @@ return true;
                     subi = i/3;
                   boolean rowncolumn = CheckInRowAndColumn(board,i,j,current);
                   boolean subbox = CheckSubboxes(board,subi,subj,current);
-                      if(!rowncolumn){
+                      if(!rowncolumn || !subbox){
                          return false;
                       }
-                    if(!subbox){
-                        return false;
-                    }
+//                    if(!subbox){
+//                        return false;
+//                    }
 //                    System.out.println(board[i][j]);
 
                 }
@@ -109,7 +109,7 @@ return true;
                 {'.', '.', '.', '.', '2', '.', '6', '.', '.'},
                 {'.', '9', '.', '.', '.', '.', '.', '7', '.'},
                 {'.', '.', '.', '.', '.', '.', '.', '.', '.'},
-                {'8', '.', '.', '8', '.', '.', '.', '.', '.'}
+                {'8', '.', '.', '.', '.', '.', '.', '.', '.'}
         };
 
        boolean ans =  isValidSudoku(sudoku);
