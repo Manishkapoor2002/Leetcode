@@ -10,9 +10,6 @@ public class Lower_Bound {
         if(arr[mid] >= x){
             min = Math.min(min, mid);
             high = mid-1;
-        }
-        if(x<arr[mid]){
-            high = mid-1;
         }else{
             low = mid+1;
         }
