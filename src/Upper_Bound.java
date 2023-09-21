@@ -6,17 +6,12 @@ public class Upper_Bound {
        int mid = 0;
        while(low<=high){
            mid  = (low+high)/2;
-           if(arr[mid]==x){
-               low = mid+1;
-               continue;
-           }
-           if (arr[mid]>=x) {
-               min = Math.min(mid,min);
-           }
-           if(x>arr[mid]){
-               low = mid+1;
-           }else{
+
+           if(arr[mid] > x){
+               min = Math.min(min, mid);
                high = mid-1;
+           }else{
+               low = mid+1;
            }
        }
        return min;
